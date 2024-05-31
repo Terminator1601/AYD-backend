@@ -33,7 +33,7 @@ membership,Gym
 yoga,Gym
 cardio,Gym
 coaching,Coaching
-mentor,Coaching
+mentor,Consultant
 tutor,Coaching
 education,Coaching
 training,Coaching
@@ -92,16 +92,21 @@ wellness retreat,Spa
 meditation session,Spa
 sauna facilities,Spa
 personalized coaching session,Coaching
-mentorship program,Coaching
+mentorship program,Consultant
 one-on-one tutoring,Coaching
 education and training services,Coaching
-career guidance,Coaching
+career guidance,Consultant
 continuous learning opportunities,Coaching
 professional development workshops,Coaching
 fitness gym membership,Gym
 personalized workout plan,Gym
 cardio exercises,Gym
 yoga classes,Gym
+dpa,Spa
+apa,Spa
+book an appointment with consultant,Consultant
+book an appointment with trainer,Gym
+book an appointment with professional teachers,Coaching
 trained fitness trainer,Gym
 state-of-the-art gym equipment,Gym
 group fitness sessions,Gym
@@ -122,6 +127,7 @@ vacancy for the weekend,Hotel
 complimentary breakfast,Hotel
 conference room booking,Hotel
 relaxing staycation,Hotel
+stay,Hotel
 try the chef's special,Restaurant
 reserve a table for four,Restaurant
 private dining room,Restaurant
@@ -139,8 +145,8 @@ hot tub relaxation,Spa
 aromatic steam room,Spa
 lifestyle coaching session,Coaching
 academic tutoring program,Coaching
-career development workshops,Coaching
-leadership mentoring,Coaching
+career development workshops,Consultant
+leadership mentoring,Consultant
 personal growth seminars,Coaching
 health and wellness coaching,Coaching
 fitness assessment consultation,Gym
@@ -184,10 +190,10 @@ wellnes retereat,Spa
 meditation seshun,Spa
 sauna facilites,Spa
 persinalized coaching seshun,Coaching
-mentorship progrem,Coaching
+mentorship progrem,Consultant
 one-on-one tutering,Coaching
 educashun and training servces,Coaching
-carreer guidanse,Coaching
+carreer guidanse,Consultant
 continous learnin opportunites,Coaching
 profesional developemnt workshops,Coaching
 fitnss gym membershep,Gym
