@@ -1,6 +1,5 @@
 
 
-import os
 from flask import Flask, request, jsonify
 import pickle
 import nltk
@@ -12,13 +11,10 @@ import string
 # Initialize Flask application
 app = Flask(__name__)
 
-# Get the directory of the current script
-current_dir = os.path.dirname(os.path.abspath(__file__))
-
 # Load the trained model and TF-IDF vectorizer
-with open(os.path.join(current_dir, 'ML_model', 'ML_model.pkl'), 'rb') as model_file:
+with open('./ML model/ML_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
-with open(os.path.join(current_dir, 'ML_model', 'vectorizer.pkl'), 'rb') as vectorizer_file:
+with open('./ML model/vectorizer.pkl', 'rb') as vectorizer_file:
     tfidf_vectorizer = pickle.load(vectorizer_file)
 
 # Preprocessing function
