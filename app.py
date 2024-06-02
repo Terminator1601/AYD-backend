@@ -64,9 +64,6 @@
 #     return {"status": "success", "message": "Integrate Flask Framework with Next.js"}
 
 
-
-
-
 from flask import Flask, request, jsonify
 import pickle
 import nltk
@@ -78,11 +75,6 @@ import string
 # Initialize Flask application
 app = Flask(__name__)
 
-# Ensure NLTK resources are downloaded
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
-
 # Load the trained model and TF-IDF vectorizer
 with open('./ML model/ML_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
@@ -93,6 +85,7 @@ with open('./ML model/vectorizer.pkl', 'rb') as vectorizer_file:
 stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
+
 def preprocess_text(text):
     tokens = word_tokenize(text)
     tokens = [token.lower() for token in tokens]
@@ -101,8 +94,11 @@ def preprocess_text(text):
     tokens = [lemmatizer.lemmatize(token) for token in tokens]
     return " ".join(tokens)
 
+
 # Define the category mapping
-category_mapping = {0: 'Hotel', 1: 'Restaurant', 2: 'Gym', 3: 'Coaching', 4: 'Spa', 5: 'Consultant'}
+category_mapping = {0: 'Hotel', 1: 'Restaurant',
+                    2: 'Gym', 3: 'Coaching', 4: 'Spa', 5: 'Consultant'}
+
 
 @app.route('/api/predict', methods=['POST'])
 def predict():
@@ -122,13 +118,19 @@ def predict():
     # Return the prediction as a JSON response
     return jsonify({'category': predicted_category_name})
 
+
 @app.route("/api/healthchecker", methods=["GET"])
 def healthchecker():
     return {"status": "success", "message": "Integrate Flask Framework with Next.js"}
+
 
 @app.route("/", methods=["GET"])
 def home():
     return {"status": "success", "message": "Integrate Flask Framework with Next.js"}
 
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    nltk.download('stopwords')
+    nltk.download('punkt')
+    nltk.download('wordnet')
+    app.run(host='0.0.0.0', port=8000)
